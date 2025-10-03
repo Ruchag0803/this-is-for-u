@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import LandingPage from './LandingPage';
 import LetterPage from './LetterPage';
-import './App.css'; 
+import './App.css';
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const correctPassword = "290422"; 
+  const correctPassword = "290425";
 
   const handlePasswordSubmit = (password) => {
     if (password === correctPassword) {
@@ -17,7 +18,7 @@ function App() {
   return (
     <div className="App">
       {isAuthenticated ? (
-        <LetterPage letterImagePath="/letter1.jpg" /> 
+        <LetterPage letterImagePath={`${process.env.PUBLIC_URL}/letter1.jpg`} />
       ) : (
         <LandingPage onPasswordSubmit={handlePasswordSubmit} />
       )}
