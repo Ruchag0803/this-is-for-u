@@ -1,0 +1,42 @@
+.landing-page {
+  padding: 20px;
+}
+
+.landing-page h1 {
+  color: #e91e63; /* A vibrant pink */
+  margin-bottom: 20px;
+}
+
+.landing-page p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+.password-input {
+  padding: 12px 15px;
+  margin-right: 10px;
+  border: 2px solid #ff80ab; /* Lighter pink border */
+  border-radius: 8px;
+  font-size: 1em;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.password-input:focus {
+  border-color: #e91e63;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #c2185b; /* Darker pink on hover */
+}

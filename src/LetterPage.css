@@ -1,0 +1,31 @@
+.letter-page {
+  padding: 20px;
+}
+
+.letter-page h2 {
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.letter-container {
+  margin: 30px auto;
+  border: 5px solid #ff80ab; /* Pink border around the letter */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures image stays within border */
+  max-width: 600px; /* Limit image width */
+  background-color: white;
+}
+
+.letter-image {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+}
+
+.letter-page p {
+  font-size: 1.2em;
+  margin-top: 30px;
+  color: #e91e63;
+  font-weight: bold;
+}

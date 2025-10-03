@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+import LandingPage from './LandingPage';
+import LetterPage from './LetterPage';
+import './App.css'; 
 function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const correctPassword = "290422"; 
+
+  const handlePasswordSubmit = (password) => {
+    if (password === correctPassword) {
+      setIsAuthenticated(true);
+    } else {
+      alert("Incorrect password. Please try again!");
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {isAuthenticated ? (
+        <LetterPage letterImagePath="/letter1.jpg" /> 
+      ) : (
+        <LandingPage onPasswordSubmit={handlePasswordSubmit} />
+      )}
     </div>
   );
 }
