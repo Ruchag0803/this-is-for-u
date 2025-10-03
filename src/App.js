@@ -6,8 +6,8 @@ import './App.css';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const correctPassword = "290425";
-
   const handlePasswordSubmit = (password) => {
+    console.log("password -->",password)
     if (password === correctPassword) {
       setIsAuthenticated(true);
     } else {
